@@ -5,12 +5,12 @@ The experiments were conducted on a 64-bit Windows 11 OS, using Python 3.8, CUDA
 # Data preparation:
 The dataset, sourced from https://aistudio.baidu.com/datasetdetail/228648, contains 3349 images, divided into training (2344), testing (670), and validation (335) sets in a 7:2:1 ratio. It includes three categories: overflowing trash cans, non-overflowing trash cans, and garbage.
 # Training & testing:
-# 1.在data.yaml文件下配置地址：
+# To configure paths in the data.yaml file:
     path: /Users/86181/Desktop/yolov8-main/
     train: ./dataset/laji/images/train
     val: ./dataset/laji/images/val
     test: ./dataset/laji/images/test
-# 2.在trin.py文件下设置model：
+# 2.To set up a model in the trin.py file:
     model = YOLO('ultralytics/cfg/models/v8/yolov8.yaml')
     # model.load('yolov8n.pt') # loading pretrain weights
     model.train(data='dataset/data.yaml',
@@ -28,3 +28,6 @@ The dataset, sourced from https://aistudio.baidu.com/datasetdetail/228648, conta
                 project='runs/train',
                 name='v8n-mdpiou',
                 )
+
+# start training：
+     train.py
